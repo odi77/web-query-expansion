@@ -5,17 +5,13 @@
 The goal of this project is to create a query ranking tool for web searches. The tool takes a user-input query and returns a list of relevant documents, with web pages represented by their titles and URLs. The default behavior stores the results in a `results.json` file, sorted by relevance.
 
 ```mermaid
-graph TB;
-  A[User] -->|Execute python3 main.py| B[Start];
-  B -->|Initialize| C[Utils: Read index and documents];
-  C -->|Initialize Query| D[Query: Tokenize, Rank, Export];
-  D -->|End| E[End];
-
-  F[User] -->|Execute python3 main.py --index ... --documents ...| G[Start];
-  G -->|Read Input| H[Read command line input];
-  H -->|Initialize Utils| I[Utils: Read index and documents];
-  I -->|Initialize Query| J[Query: Tokenize, Rank, Export];
-  J -->|End| K[End];
+graph TD;
+  A[User Input] -->|Query, Index, Documents| B(Query Object)
+  B -->|Tokenize Query| C(Find Token in Document)
+  C -->|Query Tokens| D(Rank Documents from Index)
+  D -->|Ranked Documents| E(Get Documents from Ranking)
+  E -->|Document Titles and URLs| F(Export Ranking to JSON)
+  F -->|results.json| G[Results]
 ```
 
 ## Getting Started
