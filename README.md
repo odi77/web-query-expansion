@@ -37,7 +37,7 @@ By default, the values are:
 
 Alternatively, you can run the program with specified query and language using the following command:
 ```bash
-python3 main.py --index "title_pos_index.json" --documents "data/documents.json" --query "data science" --path "." --file "results.json" --lang "english"
+python3 main.py --index "data/title_pos_index.json" --documents "data/documents.json" --query "recette de cuisine" --path "." --file "results.json" --lang "fr"
 
 ```
 
