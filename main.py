@@ -6,7 +6,7 @@ import click
 @click.command()
 @click.option("--index", default="data/title_pos_index.json", type=str, help="Path to index file.")
 @click.option("--documents", default="data/documents.json", type=str, help="Path to documents file.")
-@click.option("--query", default="casting dans le monde du divertissement", type=str, help="Type your query.")
+@click.option("--query", default="coupe du monde", type=str, help="Type your query.")
 @click.option("--path", default=".", type=str, help="Path to ouput results of the query.")
 @click.option("--file", default="results.json", type=str, help="File name to ouput results of the query.")
 @click.option("--lang", default="fr", type=click.Choice(['fr', 'en']), help="Language of the query.")

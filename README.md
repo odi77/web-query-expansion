@@ -32,13 +32,16 @@ pip install -r requirements.txt
 Once the environment is set up, run the ranking process through the command line interface (CLI). Explore the available options using the following command:
 
 ```bash
+# get some help
+python3 main.py --help
+# run the app
 python3 main.py
 ```
 
 By default, the values are:
 * `--index "data/title_pos_index.json"` $\rightarrow$ Default index
 * `--documents "data/documents.json"` $\rightarrow$ Default documents
-* `--query "casting dans le monde du divertissement"` $\rightarrow$ Query for castings in entertainment
+* `--query "coupe du monde"` $\rightarrow$ Query for world cup
 * `--path "."` $\rightarrow$ Output results at the root of the project
 * `--file "results.json"` $\rightarrow$ Output query results in `results.json` file
 * `--lang "fr"` $\rightarrow$ French
