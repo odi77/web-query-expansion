@@ -5,13 +5,11 @@
 The goal of this project is to create a query ranking tool for web searches. The tool takes a user-input query and returns a list of relevant documents, with web pages represented by their titles and URLs. The default behavior stores the results in a `results.json` file, sorted by relevance.
 
 ```mermaid
-graph LR;
+graph TD;
   A[User Input] -->|Query, Index, Documents| B(Query Object)
   B -->|Tokenize Query| C(Find Token in Document)
-  C -->|Query Tokens| D(Rank Documents from Index)
-  D -->|Ranked Documents| E(Get Documents from Ranking)
-  E -->|Document Titles and URLs| F(Export Ranking to JSON)
-  F -->|results.json| G[Results]
+  C -->|Rank Documents| D(Get Documents from Ranking)
+  D -->|Export to JSON| E[Results]
 ```
 
 ## Getting Started
