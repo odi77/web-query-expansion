@@ -6,15 +6,14 @@ The goal of this project is to create a query ranking tool for web searches. The
 
 ```mermaid
 graph TD;
-  A[Start] -->|Initialize| B[Create Utils object];
-  B -->|Read JSON files| C[Read index and documents];
-  C -->|Initialize Query| D[Create Query object];
-  D -->|Tokenize, Rank, and Export| E[Perform tokenization, ranking, and export];
-  E -->|End| F[End];
-  F -->|Command Line| G[User executes command];
-  G -->|Read Input and Initialize| H[Read command line input and initialize];
-  H -->|Tokenize, Rank, and Export| I[Perform tokenization, ranking, and export];
-  I -->|End| J[End];
+  A[Start] -->|Initialize| B[Utils: Read index and documents];
+  B -->|Initialize Query| C[Query: Tokenize, Rank, Export];
+  C -->|End| D[End];
+
+  A -->|Command Line| E[User executes command];
+  E -->|Read Input| F[Read command line input];
+  F -->|Initialize Query| G[Query: Tokenize, Rank, Export];
+  G -->|End| H[End];
 ```
 
 ## Getting Started
