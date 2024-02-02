@@ -34,22 +34,8 @@ Once the environment is set up, run the ranking process through the command line
 ```bash
 # get some help
 python3 main.py --help
-# run the app
+# run the app with default values
 python3 main.py
-```
-
-By default, the values are:
-* `--index "data/title_pos_index.json"` $\rightarrow$ Default index
-* `--documents "data/documents.json"` $\rightarrow$ Default documents
-* `--query "coupe du monde"` $\rightarrow$ Query for world cup
-* `--path "."` $\rightarrow$ Output results at the root of the project
-* `--file "results.json"` $\rightarrow$ Output query results in `results.json` file
-* `--lang "fr"` $\rightarrow$ French
-
-Alternatively, you can run the program with specified query and language using the following command:
-```bash
-python3 main.py --index "data/title_pos_index.json" --documents "data/documents.json" --query "recette de cuisine" --path "." --file "results.json" --lang "fr"
-
 ```
 
 ## Contributors
