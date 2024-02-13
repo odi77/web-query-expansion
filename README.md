@@ -36,6 +36,8 @@ Once the environment is set up, run the ranking process through the command line
 python3 main.py --help
 # run the app with default values
 python3 main.py
+# run with pre-specified query
+python3 main.py --query "write your query"
 ```
 
 ## Contributors
